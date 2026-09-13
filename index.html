@@ -232,21 +232,81 @@
             background-size: 24px 24px;
         }
 
-        .profile-photo {
-            display: block;
+        .portrait-frame {
+            position: relative;
             width: 100%;
             aspect-ratio: 4 / 5;
-            object-fit: cover;
+            overflow: hidden;
             border: 8px solid rgba(255, 255, 255, 0.92);
             border-radius: 28px;
+            background: #dfe8ef;
             box-shadow: 0 30px 80px rgba(27, 33, 54, 0.22);
             transform: rotate(2.5deg);
+        }
+
+        .profile-photo {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(1.025);
+            transition: opacity 320ms ease, transform 500ms ease;
+        }
+
+        .profile-photo--shanghai { object-position: center center; }
+        .profile-photo--yantai { object-position: 20% center; }
+
+        .profile-photo.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .portrait-controls {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            z-index: 2;
+            display: flex;
+            gap: 8px;
+            padding: 8px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.72);
+            border-radius: 999px;
+            background: rgba(11, 16, 32, 0.5);
+            backdrop-filter: blur(12px);
+        }
+
+        .portrait-dot {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.48);
+            cursor: pointer;
+            transition: background 180ms ease, transform 180ms ease;
+        }
+
+        .portrait-dot:hover { transform: scale(1.2); }
+
+        .portrait-dot.is-active {
+            background: #fff;
+            transform: scale(1.25);
+        }
+
+        .portrait-dot:focus-visible {
+            outline: 2px solid var(--cyan);
+            outline-offset: 3px;
         }
 
         .portrait-note {
             position: absolute;
             left: -38px;
             bottom: 38px;
+            z-index: 3;
             display: flex;
             align-items: center;
             gap: 9px;
@@ -259,6 +319,10 @@
             font-size: 0.77rem;
             font-weight: 700;
             letter-spacing: 0.02em;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .profile-photo { transition: none; }
         }
 
         .status-dot {
@@ -976,7 +1040,7 @@
                 <p class="eyebrow">Hi there, I’m</p>
                 <h1>Manxi<br>Lin.</h1>
                 <p class="hero-role">Algorithm Engineer · Alibaba Inc.</p>
-                <p class="hero-background">I received my bachelor’s degree from Huazhong University of Science and Technology (HUST) in June 2019 and my Ph.D. from the Technical University of Denmark (DTU) in March 2025, advised by Prof. Aasa Feragen. In 2023, I was a visiting researcher with Prof. Qi Dou’s group at the Chinese University of Hong Kong (CUHK).</p>
+                <p class="hero-background">I received my bachelor’s degree from Huazhong University of Science and Technology (HUST) in June 2019 and my Ph.D. from the Technical University of Denmark (DTU) in March 2025, advised by Prof. Aasa Feragen. During my Ph.D., I was also affiliated with the Pioneer Centre for AI. In 2023, I was a visiting researcher with Prof. Qi Dou’s group at the Chinese University of Hong Kong (CUHK).</p>
                 <p class="hero-story">My current research centers on native multimodal understanding and multimodal retrieval: tokenizing heterogeneous information into native model capabilities while keeping model decisions grounded and interpretable—particularly through mid-training and post-training.</p>
                 <div class="hero-actions">
                     <a class="button button-primary" href="mailto:manxilin@gmail.com">manxilin@gmail.com <span class="arrow" aria-hidden="true">↗</span></a>
@@ -984,9 +1048,16 @@
                 </div>
             </div>
 
-            <div class="portrait-stage">
-                <img src="profile.jpg" alt="Manxi Lin by the sea in Yantai, May 2026" class="profile-photo">
-                <div class="portrait-note"><span class="status-dot" aria-hidden="true"></span> Yantai coast · May 2026</div>
+            <div class="portrait-stage" data-portrait-gallery>
+                <div class="portrait-frame">
+                    <img src="profile2.jpg" alt="Manxi Lin at Shanghai Disneyland on August 30, 2026" class="profile-photo profile-photo--shanghai is-active" data-portrait-slide data-caption="Shanghai Disneyland · Aug 30, 2026">
+                    <img src="profile.jpg" alt="Manxi Lin by the sea in Yantai, May 2026" class="profile-photo profile-photo--yantai" data-portrait-slide data-caption="Yantai coast · May 2026">
+                    <div class="portrait-controls" role="group" aria-label="Choose profile photo">
+                        <button class="portrait-dot is-active" type="button" data-portrait-index="0" aria-label="Show Shanghai Disneyland photo" aria-pressed="true"></button>
+                        <button class="portrait-dot" type="button" data-portrait-index="1" aria-label="Show Yantai coast photo" aria-pressed="false"></button>
+                    </div>
+                </div>
+                <div class="portrait-note" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span data-portrait-caption>Shanghai Disneyland · Aug 30, 2026</span></div>
             </div>
         </header>
 
@@ -1332,8 +1403,33 @@
         <footer>
             <span>© 2026 Manxi Lin</span>
             <a href="mailto:manxilin@gmail.com">manxilin@gmail.com</a>
-            <span>Last updated · August 2026</span>
+            <span>Last updated · September 2026</span>
         </footer>
     </main>
+    <script>
+        document.querySelectorAll("[data-portrait-gallery]").forEach((gallery) => {
+            const slides = [...gallery.querySelectorAll("[data-portrait-slide]")];
+            const controls = [...gallery.querySelectorAll("[data-portrait-index]")];
+            const caption = gallery.querySelector("[data-portrait-caption]");
+
+            const showPortrait = (index) => {
+                slides.forEach((slide, slideIndex) => {
+                    slide.classList.toggle("is-active", slideIndex === index);
+                });
+                controls.forEach((control, controlIndex) => {
+                    const isActive = controlIndex === index;
+                    control.classList.toggle("is-active", isActive);
+                    control.setAttribute("aria-pressed", String(isActive));
+                });
+                caption.textContent = slides[index].dataset.caption;
+            };
+
+            controls.forEach((control) => {
+                control.addEventListener("click", () => {
+                    showPortrait(Number(control.dataset.portraitIndex));
+                });
+            });
+        });
+    </script>
 </body>
 </html>
