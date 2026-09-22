@@ -101,6 +101,26 @@ body[data-section=safety]{--ink:#183f3d;--muted:#697976;--paper:#f8f6ef;--card:#
 .photo-pocket select:focus-visible,.photo-pocket summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(max-width:420px){.photo-picker-row{gap:8px}.photo-picker-row .photo-language-label{flex:0 0 100%;display:flex;align-items:center;gap:10px}.photo-language-label select{width:auto;flex:1;margin:0}.photo-pick-actions{flex:1 0 100%;min-width:0}.photo-preview img{max-height:235px}}
 
+
+.voice-input{padding:12px 0 10px;border-bottom:1px dashed var(--line);margin-bottom:12px}
+.voice-heading{display:flex;align-items:center;gap:8px;font-size:13px}.voice-heading b{font-weight:500}.voice-heading>span{color:var(--accent);font-size:15px}
+.voice-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.voice-actions button{min-height:44px;padding:10px 15px;background:var(--card);border:1px solid var(--line);border-radius:1px;font-size:13px;flex:1;min-width:95px}
+.voice-actions button:disabled{opacity:.5;cursor:default}.voice-actions button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff9e9;opacity:1}
+.voice-actions #voice-cancel{flex:0;min-width:64px;background:transparent;color:var(--muted)}.voice-actions [hidden],#voice-preview[hidden]{display:none!important}
+.voice-input[data-state="listening"] .voice-heading>span{box-shadow:0 0 0 4px #9e382a16;border-radius:50%}
+.language-pocket #voice-status{font-size:12px;line-height:1.75;color:var(--accent);margin:7px 0}.language-pocket #voice-status:empty{display:none}
+.language-pocket #voice-preview{font-size:15px;line-height:1.65;padding:9px 11px;border-left:2px solid var(--line);overflow-wrap:anywhere;margin:7px 0}
+.language-pocket .voice-note{font-size:11px;line-height:1.75;margin:8px 0 2px}
+
+:root{--paper:#f2ebdc;--card:#fbf7ec;--paper-grain:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22240%22%20height%3D%22240%22%20viewBox%3D%220%200%20240%20240%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.68%22%20numOctaves%3D%223%22%20seed%3D%2211%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3C%2Ffilter%3E%3Cpath%20fill%3D%22%23736348%22%20opacity%3D%22.055%22%20filter%3D%22url%28%23n%29%22%20d%3D%22M0%200h240v240H0z%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23827457%22%20stroke-width%3D%22.5%22%20opacity%3D%22.095%22%3E%3Cpath%20d%3D%22m11%2028%205-1m52%2018%202%201m74-31%204%202m62%2025%207-1M27%2077l3%201m64-9%206-1m69%2018%204%201m43-12%203%201M9%20131l4%201m43-19%207%201m70%2014%205-1m61-18%204%201M33%20169l6-2m55%2012%203%201m62-26%207%201m47%2033%204%201M12%20221l4-1m50-12%205%201m60%2012%203-1m64-12%206%201%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}
+body:not([data-section="safety"]){background-color:#e4ddcf;background-image:var(--paper-grain)}
+body:not([data-section="safety"])>.wrap{min-height:100dvh;background-color:var(--paper);background-image:var(--paper-grain),radial-gradient(ellipse at 58% 9%,#fffdf63d,transparent 68%),linear-gradient(90deg,#9f896916,transparent 36px,transparent calc(100% - 24px),#a28d6f13);box-shadow:0 0 2px #715a3830,0 3px 32px #5d4b3615}
+body:not([data-section="safety"]) :is(.journey-stop,.journey-meal,.meal-body,.food,.rest-tile,.day-plate,.chapter-contents,.language-pocket,.travel-ticket,.fine-block){background-image:var(--paper-grain)}
+body:not([data-section="safety"]) .date-nav{background-color:#f2ebdcf7;background-image:var(--paper-grain)}
+@media(max-width:650px){body:not([data-section="safety"])>.wrap{background-image:var(--paper-grain),linear-gradient(90deg,#9f896912,transparent 17px,transparent calc(100% - 13px),#a28d6f0d);box-shadow:none}body:not([data-section="safety"]) .tabs{background-color:#f2ebdcfa;background-image:var(--paper-grain)}}
+@media print{body:not([data-section="safety"]),body:not([data-section="safety"])>.wrap{background:#fff;box-shadow:none}}
+
 </style></head><body><div class="wrap"><header><div class="topbar"><div class="brand">俄罗斯 · 十一日札记</div><span>2026.09.26 — 10.06</span></div><div class="hero editorial-hero"><div class="hero-copy"><div class="eyebrow" lang="ru">ДНЕВНИК ПУТЕШЕСТВИЯ · 2026</div><h1>九月末，<br>去俄罗斯。</h1><p class="intro">莫斯科的长街，彼得堡的秋水。<br>天一点点暗下来，街灯替秋天续上一行。</p><div class="stats"><span><b>11</b>天</span><span><b>2</b>座城</span><span><b>50</b>处餐桌与补给</span></div></div><div class="cover-art" id="cover-art"></div><div class="hero-colophon"><span>26 СЕНТЯБРЯ — 6 ОКТЯБРЯ</span><span>秋日旅行札记 · 2026</span></div></div></header><section class="shared-banner" aria-label="本机保存状态"><div><b>本机保存</b><span>无需登录 · 随手选择</span></div><p id="sync-status" role="status">选择会保存在当前浏览器</p></section><div class="trip-route" aria-label="全程城市路线"><span><b>莫斯科</b><small>9.26 — 9.30</small></span><i aria-hidden="true">→</i><span><b>圣彼得堡</b><small>10.01 — 10.04</small></span><i aria-hidden="true">→</i><span><b>莫斯科</b><small>10.04 — 10.06</small></span></div><nav class="tabs" role="tablist" aria-label="指南栏目"><button role="tab" id="tab-day" aria-controls="view-day" aria-selected="true" data-view="day">行程三餐</button><button role="tab" id="tab-food" aria-controls="view-food" aria-selected="false" data-view="food">想吃清单</button><button role="tab" id="tab-rest" aria-controls="view-rest" aria-selected="false" data-view="rest">餐厅收藏</button><button role="tab" id="tab-transit" aria-controls="view-transit" aria-selected="false" data-view="transit">入境交通</button><button role="tab" id="tab-safety" aria-controls="view-safety" aria-selected="false" data-view="safety">安全求助</button></nav><details class="xhs-help"><summary>小红书打不开时，怎样找到原帖？</summary><p>手机装有小红书时，可点“App 直达”尝试直接进入这篇笔记；上方标题仍打开原始网页链接。如果微信等内置浏览器拦截，可先用手机系统浏览器打开本指南。直达按钮按<a href="https://pages.xiaohongshu.com/activity/deeplink" target="_blank" rel="noopener noreferrer">小红书官方说明</a>提供，当前手机版本的兼容性尚未实测；若仍失败，可复制标题到小红书搜索。</p></details><details class="language-pocket" id="language-pocket"><summary>中俄互译 · 临时问一句</summary><details class="photo-pocket" id="photo-pocket">
   <summary>拍照翻译 · 菜单与路牌</summary>
   <div class="photo-picker-row">
@@ -138,6 +158,13 @@ body[data-section=safety]{--ink:#183f3d;--muted:#697976;--paper:#f8f6ef;--card:#
   <p class="photo-privacy">照片在本机识别，不上传；翻译时仅发送你选用的文字。首次识别需联网下载识字资料，可能稍等片刻。</p>
 </details>
 
+<section id="voice-input" class="voice-input" aria-label="语音输入" data-state="idle">
+<div class="voice-heading"><span aria-hidden="true">◉</span><b>说一句，再翻译</b></div>
+<div class="voice-actions"><button type="button" id="voice-zh" data-lang="zh-CN" aria-pressed="false">说中文</button><button type="button" id="voice-ru" data-lang="ru-RU" aria-pressed="false">说俄语</button><button type="button" id="voice-stop" hidden>停止收音</button><button type="button" id="voice-cancel" hidden>取消</button></div>
+<p id="voice-status" role="status" aria-live="polite"></p>
+<p id="voice-preview" lang="" aria-live="off" hidden></p>
+<p class="voice-note">识别后填入下方，确认文字再翻译。语音可能交由浏览器的语音服务处理，通常需要联网；本指南不录存音频。不支持时，可用手机键盘上的麦克风。</p>
+</section>
 <label for="translation-text">想说的话，或复制来的俄文</label>
 <textarea id="translation-text" rows="3" maxlength="160" placeholder="例如：请问入口在哪里？" aria-describedby="translation-service-note"></textarea>
 <div class="inline-translation-actions"><button id="translate-zh-ru" type="button">中文 → 俄语</button><button id="translate-ru-zh" type="button">俄语 → 中文</button><button id="translation-clear" type="button">清空</button></div>
@@ -299,7 +326,205 @@ function skylineArt(type){
  }
  return `<svg ${common}><rect width="900" height="340" fill="#dfd1b5"/><circle cx="700" cy="134" r="111" fill="#a43d2b"/><path d="M0 340 214 0H274L60 340Z" fill="#303630"/><g fill="#303630"><path d="M233 340V225H281V340M320 340V165H385V340M413 340V115H477V340M515 340V191H574V340M617 340V228H669V340"/><path d="M221 223C197 193 254 163 255 139 257 163 316 193 291 223ZM307 163C274 119 350 89 353 62 356 90 429 119 399 163ZM400 113C364 73 443 46 445 15 448 46 524 73 490 113ZM502 189C471 148 545 114 547 86 550 114 618 148 588 189ZM604 226C580 194 642 170 644 144 647 171 705 194 682 226Z"/></g><path d="M444 4V35M431 14H457" stroke="#303630" stroke-width="4"/><g stroke="#dfd1b5" stroke-width="5"><path d="M244 248V320M267 248V320M335 205V320M369 205V320M427 153V320M462 153V320M530 226V320M559 226V320M632 253V320M655 253V320"/></g><path d="M80 306H155M99 292H175" stroke="#a43d2b" stroke-width="4"/></svg>`;
 }
-function dayFrontispiece(i){const [art,ru,caption,places]=JOURNAL[i],romantic=['palace','river','ballet'].includes(art);return `<figure class="day-plate ${romantic?'romantic':'constructive'}"><div class="plate-image">${skylineArt(art)}<span class="plate-number">${String(i+1).padStart(2,'0')}</span></div><figcaption><span class="plate-russian" lang="ru">${ru}</span><b>${caption}</b><small>${places}</small>${literaryNote(i)}</figcaption></figure>`;}
+// Eleven separate bookplate compositions. Inline geometry only; no remote assets.
+function chapterArt(i){
+ const ink='#303b34',paper='#e3d6b8',cream='#f0e7cf',red='#a23e2e',gold='#ad9157',night='#293b42';
+ const windows=(x,y,n,gap,w=9,h=24,color=paper)=>Array.from({length:n},(_,n)=>`<rect x="${x+n*gap}" y="${y}" width="${w}" height="${h}" fill="${color}"/>`).join('');
+ const lines=(x,y,n,gap,length,color=gold)=>Array.from({length:n},(_,n)=>`<path d="M${x} ${y+n*gap}h${length}" stroke="${color}" stroke-width="1.3"/>`).join('');
+ const star=(x,y,s,color=cream)=>`<path d="M${x} ${y-s}l${s*.23} ${s*.75} ${s*.77} ${s*.25}-${s*.77} ${s*.25}-${s*.23} ${s*.75}-${s*.23}-${s*.75}-${s*.77}-${s*.25} ${s*.77}-${s*.25}Z" fill="${color}"/>`;
+ const frame=(color=gold)=>`<path d="M26 88V24H874V316H26V286" stroke="${color}" stroke-width="1.4" fill="none"/>`;
+ let art='';
+ switch(i){
+ case 0: // A lit doorway and a drink after the night flight.
+  art=`<rect width="900" height="340" fill="${night}"/>
+   <path d="M0 287 481 223 900 257V340H0Z" fill="${ink}"/>
+   <path d="M95 258V117H230V89H389V245M116 149H207M251 121H365" stroke="${gold}" stroke-width="2"/>
+   ${windows(118,164,3,30,12,35,gold)}${windows(255,143,4,27,10,33,gold)}${windows(256,199,3,34,10,26,paper)}
+   <path d="M452 290V121a92 92 0 0 1 184 0V290Z" fill="${red}"/>
+   <path d="M470 285V121a74 74 0 0 1 148 0V285Z" fill="${gold}"/>
+   <path d="M488 283V126a56 56 0 0 1 112 0V283Z" fill="${night}"/>
+   <path d="M544 70V280M489 155H600" stroke="${gold}" stroke-width="3"/>
+   <rect x="582" y="202" width="4" height="26" fill="${paper}"/>
+   <path d="M671 115H805L738 189ZM738 189V268M710 269H766" stroke="${paper}" stroke-width="4" fill="none"/>
+   <path d="M689 135H787L738 185Z" fill="${red}"/>
+   <path d="M763 95 746 145" stroke="${gold}" stroke-width="3"/><circle cx="752" cy="126" r="8" fill="${gold}"/>
+   <path d="M515 298 493 329M576 298 599 329M95 308H256M108 317H206" stroke="${gold}" stroke-width="2" opacity=".7"/>
+   ${star(744,53,8)}${star(404,83,4)}${frame()}`;
+  break;
+ case 1: // VDNKh and yesterday's small treasures, not a skyline repeated.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <path d="M302 340 627 0H766L455 340Z" fill="${red}"/>
+   <path d="M489 312C529 242 568 148 593 50L610 46C604 143 576 242 548 312Z" fill="${ink}"/>
+   <path d="m592 44 23-31 1 39-10 10Z" fill="${ink}"/>
+   <path d="M571 107 669 40M578 127 711 35M588 143 758 39" stroke="${gold}" stroke-width="2"/>
+   <circle cx="762" cy="129" r="43" stroke="${ink}" stroke-width="3"/><ellipse cx="762" cy="129" rx="75" ry="17" transform="rotate(-26 762 129)" stroke="${ink}" stroke-width="2"/>
+   <path d="M594 312V253H835V312M583 249H846M627 251V307M669 251V307M711 251V307M753 251V307M795 251V307" stroke="${ink}" stroke-width="10"/>
+   <path d="M582 240 714 178 847 240Z" fill="${ink}"/>
+   <path d="M693 223V205H735V223" stroke="${paper}" stroke-width="3"/>
+   <path d="M53 267H380V280H53Z" fill="${ink}"/>
+   <path d="M75 264V206H187V264M75 223H186" stroke="${ink}" stroke-width="4"/>
+   <circle cx="131" cy="242" r="15" stroke="${ink}" stroke-width="4"/><rect x="89" y="213" width="15" height="7" fill="${red}"/>
+   <path d="M207 263V249H284V263M207 242H284V254M215 233H294V245" stroke="${ink}" stroke-width="3"/>
+   <path d="M302 264C282 241 289 212 308 202 301 194 307 174 324 174S347 194 340 202C360 213 367 242 348 264Z" fill="${red}"/>
+   <circle cx="324" cy="194" r="9" fill="${paper}"/><path d="M305 233Q324 213 345 234M315 246H335" stroke="${paper}" stroke-width="3"/>
+   ${star(378,100,11,ink)}${lines(87,104,4,8,126,ink)}<path d="M45 314H399" stroke="${gold}" stroke-width="2"/>`;
+  break;
+ case 2: // From the cemetery trees to the university above the last light.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <circle cx="705" cy="129" r="87" fill="${red}"/>
+   <path d="M0 285Q245 239 472 259T900 254V340H0Z" fill="${gold}"/>
+   <path d="M472 266Q641 288 496 313T512 340H757Q560 307 671 288T601 264Z" fill="${cream}"/>
+   <path d="M322 264V205H387V172H431V118H471V89H488V47H497V89H514V118H554V172H598V205H660V264Z" fill="${ink}"/>
+   <path d="M494 27V50M485 39H503" stroke="${ink}" stroke-width="3"/>
+   ${windows(405,200,7,30,9,50)}${windows(454,137,3,31,8,39)}
+   <path d="M131 340V160M131 205 80 153M131 233 197 167M131 184 172 125M131 272 56 218M131 168 103 116" stroke="${ink}" stroke-width="8"/>
+   <path d="M208 340V256M208 283 249 237M208 270 181 240" stroke="${ink}" stroke-width="5"/>
+   <path d="M63 139q26-32 45 0-20 25-45 0M162 115q26-31 47-3-19 28-47 3M182 159q25-32 47 0-20 26-47 0M35 210q27-25 48 1-20 23-48-1" fill="${ink}"/>
+   <path d="M756 312H857M781 324H851M718 292H848" stroke="${ink}" stroke-width="2"/>
+   <path d="M63 312H89V281H63Z" fill="${ink}"/><path d="M73 281V264M65 271H81" stroke="${ink}" stroke-width="3"/>
+   ${star(804,51,5,ink)}`;
+  break;
+ case 3: // A gallery enfilade, portraits and a single visitor.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <path d="M40 22H860V319H40Z" stroke="${gold}" stroke-width="2"/>
+   <path d="M478 20V283H733V20M506 39V283H705V39M532 59V283H679V59" stroke="${ink}" stroke-width="9"/>
+   <path d="M551 82H660V283H551Z" fill="${red}"/>
+   <path d="M39 316 479 281M859 316 734 281M482 281 400 340M731 281 801 340M539 283 521 340M679 283 698 340" stroke="${gold}" stroke-width="2"/>
+   <rect x="95" y="81" width="152" height="172" fill="${ink}"/><rect x="105" y="91" width="132" height="152" stroke="${gold}" stroke-width="3"/>
+   <path d="M119 227Q119 170 170 173T224 227Z" fill="${red}"/><ellipse cx="171" cy="149" rx="29" ry="34" fill="${paper}"/>
+   <path d="M142 139Q143 109 175 111L199 139 173 126Z" fill="${gold}"/><path d="M172 146V162H181" stroke="${ink}" stroke-width="2"/>
+   <rect x="287" y="105" width="137" height="130" stroke="${gold}" stroke-width="9"/><path d="M301 222 410 121V222Z" fill="${red}"/><circle cx="333" cy="155" r="19" fill="${ink}"/>
+   <path d="M598 269V225M624 269V225M592 270H606M617 270H631" stroke="${ink}" stroke-width="7"/>
+   <path d="M580 226 589 188Q610 174 631 188L641 226Z" fill="${ink}"/><circle cx="610" cy="171" r="14" fill="${ink}"/>
+   <path d="M774 268H826V277H774ZM783 241H817V268H783Z" fill="${gold}"/>
+   <path d="M776 241C779 216 792 204 787 188 779 181 783 162 799 162 817 162 823 181 813 189 808 204 825 218 825 241Z" fill="${cream}" stroke="${gold}" stroke-width="2"/>`;
+  break;
+ case 4: // The Armoury's crown and the river beyond a Kremlin wall.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <path d="M44 291V48H422V291Z" fill="${ink}"/>
+   <path d="M59 279V63H407V279Z" stroke="${gold}" stroke-width="2"/>
+   <path d="M107 228H359V242H107Z" fill="${gold}"/>
+   <path d="M135 215 118 141 171 169 205 118 233 166 272 113 302 167 350 136 329 215Z" fill="${paper}"/>
+   <path d="M146 214H323M141 196H327" stroke="${red}" stroke-width="8"/>
+   <circle cx="120" cy="136" r="7" fill="${gold}"/><circle cx="205" cy="114" r="7" fill="${gold}"/><circle cx="274" cy="109" r="7" fill="${gold}"/><circle cx="350" cy="131" r="7" fill="${gold}"/>
+   <path d="M166 182 174 190 166 198 158 190ZM231 181 241 191 231 201 221 191ZM297 182 305 190 297 198 289 190Z" fill="${red}"/>
+   <path d="M472 246V203H521V178H575V97H586V66H598V43H609V66H621V97H632V178H685V203H733V246Z" fill="${red}"/>
+   <path d="M575 97 603 51 632 97Z" fill="${ink}"/><circle cx="603" cy="129" r="15" fill="${paper}"/><path d="M603 117V130H613" stroke="${ink}" stroke-width="2"/>
+   <path d="M479 200V186H490V200M503 200V186H514V200M692 200V186H703V200M716 200V186H727V200" stroke="${red}" stroke-width="7"/>
+   <path d="M433 267 682 257 841 177 857 187 695 284 433 299Z" fill="${ink}"/>
+   <path d="M447 270 680 265 843 183" stroke="${gold}" stroke-width="2"/>
+   <path d="M480 316H693M751 310H861M640 328H815" stroke="${gold}" stroke-width="2"/>
+   <circle cx="795" cy="83" r="33" fill="${gold}"/><path d="M795 125V152M784 127V145M807 123V149" stroke="${gold}" stroke-width="2"/>`;
+  break;
+ case 5: // Swan Lake as a theatre, not another river postcard.
+  art=`<rect width="900" height="340" fill="${night}"/>
+   <path d="M0 0H900V32H0Z" fill="${red}"/>
+   <path d="M0 20H196Q202 130 68 193V340H0ZM900 20H705Q698 130 832 193V340H900Z" fill="${red}"/>
+   <path d="M25 32Q57 120 58 177M73 32Q100 106 70 178M122 32Q137 104 82 171M877 32Q844 120 842 177M828 32Q801 106 832 178M781 32Q763 104 820 171" stroke="${gold}" stroke-width="2"/>
+   <path d="M39 186 95 159M806 159 859 186" stroke="${gold}" stroke-width="10"/>
+   <circle cx="644" cy="98" r="32" fill="${gold}"/>
+   <path d="M622 75a29 29 0 1 0 36 41 29 29 0 0 1-36-41Z" fill="${paper}"/>
+   <path d="M286 252Q353 211 396 186L409 223Q466 236 492 212L504 181Q488 163 504 140 525 111 549 127 566 143 556 165L543 155Q548 141 536 139 517 137 520 158L532 185Q535 225 497 250 438 281 354 267Z" fill="${paper}"/>
+   <path d="M294 252Q358 190 405 154L415 206 452 159 454 215 479 187 473 240Q398 264 319 257" fill="${cream}"/>
+   <path d="M339 241 399 185M368 245 410 211M398 244 442 201" stroke="${gold}" stroke-width="2"/>
+   <path d="m550 153 27 7-27 5Z" fill="${red}"/><circle cx="545" cy="146" r="2.5" fill="${ink}"/>
+   <path d="M183 289Q440 273 717 289M254 306Q457 291 646 304M357 319H564" stroke="${gold}" stroke-width="2"/>
+   ${star(274,99,9,gold)}${star(493,78,5,gold)}${star(383,114,4,gold)}`;
+  break;
+ case 6: // Winter Palace across the Neva, a low viewpoint from the water.
+  art=`<rect width="900" height="340" fill="${night}"/>
+   <path d="M54 99H673V225H54Z" fill="${paper}"/>
+   <path d="M42 94H685V108H42ZM53 223H675V235H53Z" fill="${gold}"/>
+   <path d="M280 99V76H451V99M304 76V64H427V76" fill="${paper}" stroke="${gold}" stroke-width="3"/>
+   ${windows(73,127,17,34,13,32,night)}${windows(73,179,17,34,13,27,night)}
+   ${Array.from({length:18},(_,n)=>`<path d="M${64+n*34} 110V218" stroke="${gold}" stroke-width="3"/>`).join('')}
+   <path d="M332 218V173a30 30 0 0 1 60 0V218Z" fill="${night}"/>
+   <path d="M348 75V52M380 75V52M312 72V54M417 72V54" stroke="${gold}" stroke-width="3"/>
+   <path d="M720 225V178H741V137H751V101H816V137H826V178H847V225Z" fill="${gold}"/>
+   <path d="M748 102a36 42 0 0 1 72 0Z" fill="${paper}"/><path d="M783 48V62M778 54H788" stroke="${paper}" stroke-width="3"/>
+   <path d="M749 182H819M749 172H819M748 139H820" stroke="${night}" stroke-width="5"/>
+   <path d="M50 251H849M150 264H453M556 276H817M58 301H233M677 318H826" stroke="${gold}" stroke-width="1.5"/>
+   <path d="M292 281H572L554 310H318Z" fill="${red}"/><path d="M330 281V254H520V281Z" fill="${paper}"/>
+   ${windows(342,263,7,24,14,13,night)}
+   <path d="M383 254V243H480V254" fill="${gold}"/><path d="M267 319H572M336 328H534" stroke="${gold}" stroke-width="2"/>
+   <path d="M62 65H199M62 74H145" stroke="${gold}" stroke-width="1.5"/>`;
+  break;
+ case 7: // Peterhof: fountains expand towards the reader, the gulf is a thin horizon.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <path d="M0 155H900M0 162H900" stroke="${gold}" stroke-width="2"/>
+   <path d="M165 119V76H735V119ZM328 76V50H571V76Z" fill="${gold}"/>
+   <path d="M166 72H735M319 49H581" stroke="${ink}" stroke-width="5"/>
+   <path d="M164 80V61H200V80M702 80V61H736V80M422 50V33H479V50" fill="${ink}"/>
+   <path d="M174 60C163 49 183 39 181 27 182 39 204 49 192 60ZM707 60C696 49 716 39 716 27 718 39 738 49 729 60Z" fill="${gold}"/>
+   ${windows(209,91,14,35,12,24,ink)}
+   <path d="M350 123H550L682 306H219Z" fill="${gold}"/>
+   <path d="M374 129H526L591 248H309Z" fill="${ink}"/>
+   <path d="M357 148H543M346 167H554M335 187H565M324 208H576M313 230H587" stroke="${paper}" stroke-width="6"/>
+   <path d="M374 256H526L548 340H352Z" fill="${ink}"/>
+   <path d="M450 254V137M448 138Q425 88 403 137M452 138Q475 88 497 137" stroke="${cream}" stroke-width="5"/>
+   <path d="M438 242 445 187H456L463 242Z" fill="${gold}"/><circle cx="450" cy="181" r="9" fill="${gold}"/>
+   <path d="M145 304V229Q141 177 111 195M147 236Q166 183 185 211M753 304V229Q751 177 720 195M755 236Q774 183 794 211" stroke="${cream}" stroke-width="5"/>
+   <path d="M107 308Q146 289 190 308M711 308Q753 289 797 308" stroke="${ink}" stroke-width="5"/>
+   <path d="M61 291 95 214 126 291ZM781 273 814 187 848 273Z" fill="${ink}"/>
+   <path d="M257 163 285 159M625 159 652 163M414 296H486M404 313H496" stroke="${paper}" stroke-width="2"/>`;
+  break;
+ case 8: // Canal perspective and wrought iron, a walking chapter.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <path d="M414 190H493L690 340H226Z" fill="${night}"/>
+   <path d="M0 23H174V250L400 194V110H331V78H251V45H174M900 29H753V245L506 193V107H589V69H677V29" fill="${ink}"/>
+   ${windows(30,93,3,43,17,30,gold)}${windows(31,154,3,43,17,30,paper)}
+   ${windows(193,100,2,36,14,25,paper)}${windows(193,152,3,36,14,25,gold)}${windows(307,137,2,30,11,23,paper)}
+   ${windows(774,97,3,40,16,32,gold)}${windows(774,158,3,40,16,32,paper)}${windows(630,106,3,35,13,28,paper)}${windows(553,139,2,30,11,24,gold)}
+   <path d="M422 192V133H440V90H462V133H481V192Z" fill="${red}"/>
+   <path d="M431 91C418 76 449 60 451 46 453 61 482 76 470 91Z" fill="${gold}"/><path d="M451 37V55M443 45H459" stroke="${red}" stroke-width="3"/>
+   <path d="M170 277Q449 120 730 277V302Q450 162 170 302Z" fill="${red}"/>
+   <path d="M177 265Q448 104 723 265" stroke="${ink}" stroke-width="4"/>
+   ${Array.from({length:13},(_,n)=>{const x=206+n*40,y=191+((x-446)/250)**2*60;return `<path d="M${x} ${y}v29M${x-10} ${y+13}q10-15 20 0q-10 14-20 0" stroke="${ink}" stroke-width="2" fill="none"/>`;}).join('')}
+   <path d="M328 310H476M454 322H554M405 333H597" stroke="${gold}" stroke-width="2"/>
+   <path d="M391 169H409M498 174H523" stroke="${gold}" stroke-width="2"/>`;
+  break;
+ case 9: // A last dinner: a table by a Moscow window overlooking the river.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <path d="M115 27H802V241H115Z" fill="${night}"/>
+   <path d="M134 219V117H223V89H318V149H363V115H450V150H502V103H603V139H689V92H783V219Z" fill="${ink}"/>
+   ${windows(154,146,2,35,13,20,gold)}${windows(244,115,2,31,12,26,paper)}${windows(529,129,2,31,13,26,paper)}${windows(707,115,2,29,11,21,gold)}
+   <path d="M128 230Q445 190 788 230M149 239Q457 212 766 239" stroke="${gold}" stroke-width="2"/>
+   <circle cx="660" cy="75" r="22" fill="${gold}"/>
+   <path d="M458 27V242M115 176H802" stroke="${gold}" stroke-width="7"/>
+   <path d="M69 257H846L899 340H0Z" fill="${red}"/>
+   <ellipse cx="447" cy="282" rx="116" ry="35" fill="${cream}"/><ellipse cx="447" cy="282" rx="85" ry="23" stroke="${gold}" stroke-width="2"/>
+   <path d="M403 281Q425 257 451 270T493 282Q474 302 443 295T403 281Z" fill="${gold}"/>
+   <path d="M417 282 473 278M455 269 458 292" stroke="${ink}" stroke-width="2"/>
+   <path d="M250 170H309L304 213Q282 240 255 213ZM280 228V281M259 282H302" fill="none" stroke="${cream}" stroke-width="4"/>
+   <path d="M258 193H303L300 212Q281 230 261 212Z" fill="${red}"/>
+   <path d="M637 167H695L690 211Q663 237 642 211ZM665 227V280M645 281H687" fill="none" stroke="${cream}" stroke-width="4"/>
+   <path d="M644 193H690L686 212Q665 229 648 212Z" fill="${red}"/>
+   <path d="M300 310H592M310 313V333M584 313V333M617 294V331M624 294V308M631 294V308M624 308V332" stroke="${paper}" stroke-width="3"/>
+   <path d="M731 282V231M720 282H742M729 224Q718 209 732 199 743 213 729 224Z" fill="${paper}"/>`;
+  break;
+ case 10: // Market vault, a packed case and an ascending flight line.
+  art=`<rect width="900" height="340" fill="${paper}"/>
+   <path d="M0 340 755 0H900L151 340Z" fill="${red}"/>
+   <path d="M68 225Q248 55 429 225Z" fill="${ink}"/>
+   <path d="M84 224Q249 93 413 224M125 224Q249 89 373 224M177 224Q249 84 321 224M246 112V224" stroke="${gold}" stroke-width="3"/>
+   <path d="M74 233H424V280H74Z" fill="${ink}"/>
+   ${windows(96,242,10,31,13,38,gold)}
+   <path d="M57 282H443M61 295H431" stroke="${ink}" stroke-width="4"/>
+   <rect x="528" y="199" width="225" height="111" rx="7" fill="${paper}" stroke="${ink}" stroke-width="7"/>
+   <path d="M600 198V179Q600 168 611 168H671Q682 168 682 179V198M557 201V308M724 201V308" stroke="${ink}" stroke-width="7"/>
+   <path d="M568 232H611V269H568Z" fill="${red}" transform="rotate(-12 568 232)"/>
+   <circle cx="683" cy="259" r="21" fill="${gold}"/><path d="M670 259H696M684 246V272" stroke="${paper}" stroke-width="2"/>
+   <path d="M558 145Q677 102 805 41" stroke="${ink}" stroke-width="2" stroke-dasharray="7 7"/>
+   <path d="m786 52 15-13-7-25 9-5 15 20 36-14 9 5-38 25 5 24-8 7-15-20-15 3Z" fill="${ink}"/>
+   <path d="M779 308H854M805 296H862" stroke="${ink}" stroke-width="2"/>
+   ${star(665,36,6,ink)}<path d="M474 265V340" stroke="${gold}" stroke-width="2"/>`;
+  break;
+ default: return chapterArt(0);
+ }
+ return `<svg viewBox="0 0 900 340" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-chapter-art="${i+1}">${art}</svg>`;
+}
+
+function dayFrontispiece(i){const [art,ru,caption,places]=JOURNAL[i],romantic=['palace','river','ballet'].includes(art);return `<figure class="day-plate ${romantic?'romantic':'constructive'}"><div class="plate-image">${chapterArt(i)}<span class="plate-number">${String(i+1).padStart(2,'0')}</span></div><figcaption><span class="plate-russian" lang="ru">${ru}</span><b>${caption}</b><small>${places}</small>${literaryNote(i)}</figcaption></figure>`;}
 const DAILY_PAGES=[{"date":"2026-09-26","author":"丘特切夫","work":"初秋有一段时光","part":"1857 · 诗题取首句","quote":"初秋有一段短暂而奇妙的时光。","ru":"Есть в осени первоначальной Короткая, но дивная пора —","url":"https://ilibrary.ru/text/1773/p.1/index.html","tarotPool":[{"name":"愚人","number":"0","symbol":"road","key":"启程 · 陌生 · 轻装","reading":"行囊还带着家里的温度，人已经到了另一种夜色里。愚人把这一晚留给初见：先坐下来，尝一口酒，不急着懂这座城。","ritual":"记住今晚听见的第一个俄语词。"},{"name":"星星","number":"XVII","symbol":"star","key":"初见 · 微光 · 相逢","reading":"星星照着尚未熟悉的街名。长途飞行后的这一杯酒，会替莫斯科留下最初的味道；往后的路，可以从这里认起。","ritual":"碰杯时，各说一件此行最想遇见的小事。"},{"name":"圣杯九","number":"IX","symbol":"cups","key":"落脚 · 酒香 · 安心","reading":"行李终于放下，杯沿映着陌生的灯。圣杯九把今晚的好运藏得很近：有地方落脚，也有人陪你坐到深夜。","ritual":"记下第一杯酒的名字，留给回家后的自己。"}]},{"date":"2026-09-27","author":"马雅可夫斯基","work":"听着！","part":"1914","quote":"如果星星被点亮，就说明有人需要它们吧？","ru":"Ведь, если звёзды зажигают — значит — это кому-нибудь нужно?","url":"https://ac.pushkininstitute.ru/storage/books/poslushayte_text.pdf","tarotPool":[{"name":"星星","number":"XVII","symbol":"star","key":"愿望 · 微光 · 好奇","reading":"旧物与太空之间，藏着人不肯丢掉的愿望。星星让今天多留一点好奇，哪怕只是为一件叫不出名字的东西停步。","ritual":"在市集里找一件让你想到童年的旧物。"},{"name":"愚人","number":"0","symbol":"road","key":"偶遇 · 旧物 · 兴致","reading":"愚人走进市集，原本空着的口袋忽然有了故事。今天适合为一件无用却喜欢的旧物停下，也适合在火箭下面，拾回一点孩子气。","ritual":"在摊位间挑一件最意外的发现，讲给同行的人听。"},{"name":"世界","number":"XXI","symbol":"wreath","key":"昨日 · 远方 · 相连","reading":"旧货摊上的小东西，与展馆外的庞大火箭，竟属于同一座城。世界让零散的见闻接在一起：人对远方的想象，从来没有真正过时。","ritual":"把一件旧物和一座展馆拍成一组照片。"}]},{"date":"2026-09-28","author":"莱蒙托夫","work":"我独自走上大路","part":"第二节","quote":"天空庄严而奇妙。大地在蓝色的光辉里睡着了。","ru":"В небесах торжественно и чудно! Спит земля в сиянье голубом...","url":"https://ilibrary.ru/text/1033/p.1/index.html","tarotPool":[{"name":"隐者","number":"IX","symbol":"lantern","key":"独处 · 凝望 · 清明","reading":"隐者的灯照不远，却足够看清脚下。墓园里的名字与山上的暮色，会让今天格外清明；安静下来，也能感到有人同行。","ritual":"在观景台收起手机，安静看一分钟。"},{"name":"星星","number":"XVII","symbol":"star","key":"宁静 · 天光 · 宽阔","reading":"走出墓园，天空仍把整座城笼在微光里。星星留下的是安慰：有些名字会被记得，有些心事可以在山风里暂时放下。","ritual":"等日落时，找一扇最早亮起灯的窗。"},{"name":"节制","number":"XIV","symbol":"vessels","key":"树影 · 暮色 · 安顿","reading":"节制把墓园的静与山上的风放在一起。白昼渐短，目光却可以看得更远；今天不必带走许多，心里有一处安静就够了。","ritual":"在观景台给自己留一分钟，只看天空的颜色。"}]},{"date":"2026-09-29","author":"果戈理","work":"肖像","part":"第二部","quote":"高贵的艺术来到世间，是为了使人安宁，使人和解。","ru":"Ибо для успокоения и примирения всех нисходит в мир высокое созданье искусства.","url":"https://ilibrary.ru/text/77/p.2/index.html","tarotPool":[{"name":"女祭司","number":"II","symbol":"moon","key":"直觉 · 沉默 · 细看","reading":"女祭司把答案藏在没有说出的地方。今天的画廊里，总有一幅画不必先懂；站在它面前，容许自己只是喜欢。","ritual":"选一幅画，只记下它让你想到的一个人。"},{"name":"圣杯王后","number":"QUEEN","symbol":"cup","key":"共鸣 · 画面 · 温柔","reading":"圣杯王后认得那些没有说出口的感情。今天的画里，也许有一双眼睛让你停下；不必解释得漂亮，记得当时心里一动就好。","ritual":"在喜欢的画前，看一眼它最不起眼的角落。"},{"name":"星星","number":"XVII","symbol":"star","key":"灵感 · 色彩 · 余光","reading":"星星落进画布，变成一点很轻的颜色。离开展厅以后，它还会跟着你走一段路；今天遇见的美，足以照亮一件平常事。","ritual":"记住画里的一种颜色，傍晚去街上找找它。"}]},{"date":"2026-09-30","author":"列夫·托尔斯泰","work":"战争与和平","part":"第四卷第三部第十八章","quote":"没有朴素、善良和真实，就没有伟大。","ru":"И нет величия там, где нет простоты, добра и правды.","url":"https://ilibrary.ru/text/11/p.312/index.html","tarotPool":[{"name":"正义","number":"XI","symbol":"scales","key":"分寸 · 审视 · 取舍","reading":"正义把辉煌与代价放在同一架天平上。看过广场、冠冕与兵器，傍晚去河边，把今天真正想记住的东西留下。","ritual":"挑一件与宏大历史无关的小事，写进旅行札记。"},{"name":"世界","number":"XXI","symbol":"wreath","key":"历史 · 河流 · 此刻","reading":"广场与宫墙收着漫长的历史，河水仍只顾向前。世界把宏大的年代还给展柜，也把这个傍晚还给你：身在其中，便已有自己的记忆。","ritual":"在河边拍一张有同行人身影的照片。"},{"name":"节制","number":"XIV","symbol":"vessels","key":"辉煌 · 日常 · 轻盈","reading":"节制为金顶与兵器添上一点人间的温度。看过许多珍宝，或许最想念的仍是一口热食；懂得回到日常，也是一种丰盛。","ritual":"今天的小吃只选最想尝的一样，认真记住它的味道。"}]},{"date":"2026-10-01","author":"陀思妥耶夫斯基","work":"白夜","part":"清晨","quote":"整整一分钟的幸福！即使放在人的一生里，难道这还算少吗？","ru":"Целая минута блаженства! Да разве этого мало хоть бы и на всю жизнь человеческую?..","url":"https://ilibrary.ru/text/29/p.5/index.html","tarotPool":[{"name":"战车","number":"VII","symbol":"wheels","key":"前行 · 专注 · 节奏","reading":"战车沿着铁轨向北，把分散的心事暂时收拢。今天有车次，也有开场的钟声；把琐事提前安顿好，坐进剧院时就只剩音乐。","ritual":"在火车上吃好午饭，把晚上的时间留给天鹅。"},{"name":"星星","number":"XVII","symbol":"star","key":"北行 · 舞台 · 期待","reading":"星星跟着列车向北，又落在剧院的灯里。今天虽有好几个钟点要赶，仍会有一段音乐，让奔波都显得值得。","ritual":"开场前，把手机收好，听一会儿乐池里的声音。"},{"name":"女祭司","number":"II","symbol":"moon","key":"画廊 · 音乐 · 心领","reading":"有些故事不用翻译。女祭司让画里的神情与舞台上的身影彼此照应；在陌生的城市，你仍能听懂那些无声的部分。","ritual":"散场后，各说一个最舍不得忘的舞台画面。"}]},{"date":"2026-10-02","author":"普希金","work":"青铜骑士","part":"序诗","quote":"我爱你，彼得的创造；爱你严整的姿容，涅瓦河庄严的水流，与岸边的花岗石。","ru":"Люблю тебя, Петра творенье, Люблю твой строгий, стройный вид, Невы державное теченье, Береговой ее гранит,","url":"https://ilibrary.ru/text/451/p.1/index.html","tarotPool":[{"name":"节制","number":"XIV","symbol":"vessels","key":"调和 · 留白 · 从容","reading":"节制在两只杯子之间缓缓倾水。画与河流，室内与晚风，今天各分一点时间；看不完的展厅就留在身后，别把自己也看倦了。","ritual":"离开冬宫前，给自己留十分钟坐着的空白。"},{"name":"世界","number":"XXI","symbol":"wreath","key":"长廊 · 穹顶 · 河岸","reading":"从冬宫的房间走到教堂穹顶下，再把目光交给涅瓦河，世界在今天展开了几种尺度。能带走的有限，已经看见的都算数。","ritual":"选一扇窗，记住从那里望出去的彼得堡。"},{"name":"圣杯王后","number":"QUEEN","symbol":"cup","key":"美感 · 水流 · 相伴","reading":"圣杯王后把目光留给美，也留给身边的人。展厅里的惊喜可以交换，河岸上的风也可以一起承受；今天值得珍藏的，会不止一件。","ritual":"离开冬宫后，互相讲一件自己最喜欢的展品。"}]},{"date":"2026-10-03","author":"茹科夫斯基","work":"海","part":"1822 · 哀歌","quote":"你活着，你呼吸；你满怀纷乱的爱，与不安的思绪。","ru":"Ты живо; ты дышишь; смятенной любовью, Тревожною думой наполнено ты.","url":"https://rvb.ru/19vek/zhukovsky/01text/vol1/01versus/195.htm","tarotPool":[{"name":"圣杯王后","number":"QUEEN","symbol":"cup","key":"感受 · 照料 · 温柔","reading":"圣杯王后听得见水，也听得见疲倦。宫殿与下花园之后，给自己一间暖屋；等夜里的杯子举起，再把白天的故事说给彼此。","ritual":"晚餐时，问同行的人今天最喜欢哪个瞬间。"},{"name":"节制","number":"XIV","symbol":"vessels","key":"金光 · 海风 · 余兴","reading":"宫殿的金光与海面的灰蓝，在节制的杯中恰好相遇。白天看水与树影，夜里尝酒与食物，今天的丰盛不只在餐桌上。","ritual":"从宫殿到海边，找一处最喜欢的颜色变化。"},{"name":"圣杯九","number":"IX","symbol":"cups","key":"喷泉 · 餐桌 · 欢聚","reading":"圣杯九等在一天将尽的餐桌边。看过宫殿与下花园，带着海风回城，杯中便多了一点旅途的滋味；这一晚适合庆祝相聚。","ritual":"第一道菜上桌时，各说一个今天最鲜明的画面。"}]},{"date":"2026-10-04","author":"阿赫玛托娃","work":"夏园","part":"1959","quote":"我要去玫瑰那里，去那唯一的花园，那里有世上最美的栏杆。","ru":"Я к розам хочу, в тот единственный сад, Где лучшая в мире стоит из оград,","url":"https://www.culture.ru/poems/9131/letnii-sad","tarotPool":[{"name":"宝剑六","number":"VI","symbol":"boat","key":"渡行 · 告别 · 余韵","reading":"宝剑六把人送向另一岸，船上仍带着来时的心事。彼得堡还没走完，也可以先告别；有些街角，要等离开以后才会想起。","ritual":"上车前，给这座城留一句没有发出去的话。"},{"name":"世界","number":"XXI","symbol":"wreath","key":"街角 · 归拢 · 余韵","reading":"世界替这几日收好散落的片段：运河、花园，还有街角的一点甜。离开并不使它们变少；火车向南时，它们已经属于你的记忆。","ritual":"上车前，选一张最像这座城的照片。"},{"name":"星星","number":"XVII","symbol":"star","key":"告别 · 回望 · 来日","reading":"星星留在水面，也留在还没走完的街上。今天可以安心告别，那些未完成的小愿望，会替重逢留下一点光。","ritual":"在车窗边，记下一处愿意再来的地方。"}]},{"date":"2026-10-05","author":"布宁","work":"黄昏","part":"1909","quote":"我们总是在回忆幸福。可幸福无处不在。","ru":"О счастье мы всегда лишь вспоминаем. А счастье всюду.","url":"https://ilibrary.ru/text/1481/p.1/index.html","tarotPool":[{"name":"圣杯九","number":"IX","symbol":"cups","key":"知足 · 滋味 · 此刻","reading":"圣杯九把盛好的杯子留在眼前。最后一晚，不必再添一处景点；尝清楚这一口食物，也看清楚桌边的人，今晚就已经很满。","ritual":"举杯时，说一件这趟旅行里想带回家的小事。"},{"name":"圣杯王后","number":"QUEEN","symbol":"cup","key":"滋味 · 倾听 · 珍惜","reading":"圣杯王后把最后一晚留给桌边的人。河岸的风、老街的声音，都已可以回忆；而眼前这一餐，值得好好尝，也值得好好听。","ritual":"请同行的人替你选一道想尝的菜。"},{"name":"世界","number":"XXI","symbol":"wreath","key":"回望 · 团聚 · 丰盛","reading":"绕过两座城，世界把路途收成一桌谈话。那些走过的街与临时改过的主意，如今都有了味道；今晚足够丰盛，无须再添一站。","ritual":"轮流说一个旅途中原本没计划、却很喜欢的瞬间。"}]},{"date":"2026-10-06","author":"普希金","work":"是时候了，我的朋友","part":"1834 · 诗题取首句","quote":"是时候了，我的朋友，是时候了。心在渴求安宁。","ru":"Пора, мой друг, пора! покоя сердце просит —","url":"https://ilibrary.ru/text/772/p.1/index.html","tarotPool":[{"name":"世界","number":"XXI","symbol":"wreath","key":"完成 · 归途 · 回望","reading":"世界合上一个圆，也给下一段路留了门。漏掉几处风景，不妨碍这趟旅行完整；把证件收好，带着已经见过的秋天回家。","ritual":"候机时，从照片里选一张不需要解释的留作封面。"},{"name":"愚人","number":"0","symbol":"road","key":"行囊 · 余兴 · 下一程","reading":"愚人再次背起行囊，口袋里多了几样小东西，心里多了两座城。回家也是一段路；这趟秋天，会在往后的日子里忽然被想起。","ritual":"挑一件小纪念物，想好回家后要把它放在哪里。"},{"name":"星星","number":"XVII","symbol":"star","key":"归途 · 记忆 · 延续","reading":"星星不因旅程结束而熄灭。街灯、舞台与河上的反光，会各自找到留下的方式；夜航时，带着这些微光睡一觉。","ritual":"候机时，给这十一天写一句自己的题记。"}]}];
 const revealedTarot=new Set(),pendingTarot=new Set(),drawnTarot=new Map();
 function literaryNote(i){const p=DAILY_PAGES[i];return `<aside id="book-page" class="book-margin" aria-label="今日随身书页"><span class="book-index">随身书页 · ${String(i+1).padStart(2,'0')}</span><blockquote><p class="book-original" lang="ru">${esc(p.ru)}</p><p class="book-translation">${esc(p.quote)}</p></blockquote><p class="book-credit">${esc(p.author)} · <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" aria-label="阅读${esc(p.author)}《${esc(p.work)}》俄文原文">《${esc(p.work)}》↗</a><span class="book-edition">${esc(p.part)} · 中文自译</span></p></aside>`;}
@@ -513,6 +738,7 @@ if(['day','food','rest','transit','safety'].includes(location.hash.slice(1)))cha
   }finally{clearTimeout(timer);if(token===sequence){controller=null;setBusy(false);}}
  }
  input.addEventListener('input',cancel);
+ document.addEventListener('pocket-voice-start',cancel);
  $('#translation-clear').addEventListener('click',()=>{input.value='';cancel();input.focus();});
  actions[0].addEventListener('click',()=>translate('zh-CN','ru'));actions[1].addEventListener('click',()=>translate('ru','zh-CN'));
  window.addEventListener('pagehide',cancel);
@@ -614,6 +840,98 @@ const PHOTO_ASSET_BASE=new URL('ocr/',location.href).href;
 })();
 
 // Speech reads the completed translation only; it never starts automatically.
+(function initVoiceInput(){
+ const get=id=>document.getElementById(id),input=get('translation-text'),pocket=get('voice-input');
+ const status=get('voice-status'),preview=get('voice-preview'),stop=get('voice-stop'),cancel=get('voice-cancel');
+ const buttons=[get('voice-zh'),get('voice-ru')],Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+ const supported=typeof Recognition==='function'&&window.isSecureContext!==false;
+ let active=null,writing=false;
+ function message(text){status.textContent=text;}
+ function sync(){
+  buttons.forEach(button=>{button.disabled=!supported||!!active;button.setAttribute('aria-pressed',String(!!active&&button.dataset.lang===active.lang));});
+  stop.hidden=cancel.hidden=!active;stop.disabled=!active||active.stopping;
+  pocket.dataset.state=active?(active.stopping?'finishing':'listening'):'idle';
+ }
+ function finish(session,text,abort=false){
+  if(active!==session)return;
+  active=null;clearTimeout(session.timer);preview.textContent='';preview.hidden=true;sync();
+  if(abort)try{session.recognition.abort();}catch{}
+  if(text!==undefined)message(text);
+ }
+ function interrupt(text='已取消语音输入。'){
+  if(active)finish(active,text,true);
+ }
+ function resultMessage(session){
+  if(!session.received)return '没有识别到文字，请再试一次，或使用键盘输入。';
+  return Array.from(input.value).length>160||new TextEncoder().encode(input.value).length>500?
+   '文字已填入，但超出了单次翻译长度。请删减为短句后翻译。':'文字已填入下方，确认后点“'+(session.lang==='zh-CN'?'中文 → 俄语':'俄语 → 中文')+'”。';
+ }
+ function start(lang){
+  if(active||!supported)return;
+  if(navigator.onLine===false){message('语音识别通常需要联网。可先用键盘输入，联网后再试。');return;}
+  let recognition;
+  try{recognition=new Recognition();}catch{message('此浏览器未能启动语音输入，可用手机键盘上的麦克风。');return;}
+  const session={recognition,lang,received:false,stopping:false,timer:null};active=session;
+  recognition.lang=lang;recognition.continuous=false;recognition.interimResults=true;recognition.maxAlternatives=1;
+  document.dispatchEvent(new Event('pocket-voice-start'));
+  preview.hidden=true;preview.textContent='';sync();message('正在打开麦克风；若出现权限提示，请允许本次使用。');
+  session.timer=setTimeout(()=>finish(session,'麦克风暂未响应。请检查浏览器权限，或使用键盘上的麦克风。',true),15000);
+  recognition.onstart=()=>{
+   if(active!==session||session.stopping)return;
+   clearTimeout(session.timer);message(lang==='zh-CN'?'正在听中文，请说一句话…':'正在听俄语，请说一句话…');
+   session.timer=setTimeout(()=>finish(session,'本次语音输入已结束，可重新点按说话。',true),45000);
+  };
+  recognition.onresult=event=>{
+   if(active!==session)return;
+   let finalText='',interim='';
+   for(let i=0;i<event.results.length;i++){
+    const row=event.results[i],text=row[0]?.transcript||'';
+    if(row.isFinal)finalText+=(finalText&&lang==='ru-RU'?' ':'')+text;
+    else interim+=(interim&&lang==='ru-RU'?' ':'')+text;
+   }
+   preview.textContent=interim;preview.hidden=!interim;
+   if(finalText.trim()){
+    session.received=true;writing=true;
+    try{input.value=finalText.trim();input.lang=lang;input.dispatchEvent(new Event('input',{bubbles:true}));}finally{writing=false;}
+    message(resultMessage(session));
+   }
+  };
+  recognition.onerror=event=>{
+   if(active!==session)return;
+   const errors={
+    'not-allowed':'麦克风未获允许。请在浏览器的网站权限中开启，或用手机键盘上的麦克风。',
+    'service-not-allowed':'此浏览器暂未允许语音服务。可换用系统浏览器，或用手机键盘上的麦克风。',
+    'audio-capture':'无法使用麦克风。请检查设备权限，或关闭正在占用麦克风的应用。',
+    'network':'暂时连接不到语音识别服务，请检查网络后重试；也可使用键盘输入。',
+    'no-speech':'没有听清，请靠近麦克风再说一句。',
+    'language-not-supported':'此浏览器暂不支持所选语言的语音输入，可切换手机键盘的语言后使用听写。',
+    'aborted':'语音输入已停止。'
+   };
+   finish(session,session.received?resultMessage(session):(errors[event.error]||'语音输入暂不可用，可重试或使用手机键盘上的麦克风。'),true);
+  };
+  recognition.onend=()=>{if(active===session)finish(session,resultMessage(session));};
+  try{recognition.start();}catch{finish(session,'未能打开麦克风，请检查浏览器权限，或使用手机键盘上的麦克风。',true);}
+ }
+ buttons.forEach(button=>button.addEventListener('click',()=>start(button.dataset.lang)));
+ stop.addEventListener('click',()=>{
+  const session=active;if(!session||session.stopping)return;
+  session.stopping=true;clearTimeout(session.timer);sync();message('已停止收音，正在整理最后一句…');
+  session.timer=setTimeout(()=>finish(session,session.received?resultMessage(session):'未收到识别结果，请再试一次或用键盘输入。',true),5000);
+  try{session.recognition.stop();}catch{finish(session,resultMessage(session),true);}
+ });
+ cancel.addEventListener('click',()=>interrupt());
+ input.addEventListener('input',()=>{if(!writing)interrupt('已停止语音输入，可以继续编辑文字。');});
+ // Stop before another input or output action; late recognition events cannot overwrite it.
+ for(const id of ['translation-clear','translate-zh-ru','translate-ru-zh','translation-speak','photo-camera','photo-album','photo-use-all']){
+  get(id)?.addEventListener('click',()=>interrupt('语音输入已停止。'),true);
+ }
+ document.getElementById('language-pocket')?.addEventListener('toggle',event=>{if(!event.currentTarget.open)interrupt();});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt('语音输入已停止。');});
+ window.addEventListener('pagehide',()=>interrupt(''));
+ if(!supported)message(window.isSecureContext===false?'请在网站的 HTTPS 页面使用语音输入，或用手机键盘上的麦克风。':'此浏览器暂不支持网页语音输入。点下方文字框，再用手机键盘上的麦克风即可。');
+ sync();
+})();
+
 (function initTranslationSpeech(){
   const result=document.querySelector('#translation-result');
   const button=document.querySelector('#translation-speak');
@@ -674,6 +992,7 @@ const PHOTO_ASSET_BASE=new URL('ocr/',location.href).href;
   stop.addEventListener('click',()=>cancel('已停止。'));
   document.addEventListener('pocket-translation-ready',()=>{cancel();ready=true;syncButton();});
   document.addEventListener('pocket-translation-clear',()=>{ready=false;cancel();});
+  document.addEventListener('pocket-voice-start',()=>cancel());
   document.querySelector('#language-pocket')?.addEventListener('toggle',e=>{if(!e.currentTarget.open&&current)cancel();});
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&current)cancel();});
   window.addEventListener('pagehide',()=>{if(current)cancel();});
