@@ -121,6 +121,25 @@ body:not([data-section="safety"]) .date-nav{background-color:#f2ebdcf7;backgroun
 @media(max-width:650px){body:not([data-section="safety"])>.wrap{background-image:var(--paper-grain),linear-gradient(90deg,#9f896912,transparent 17px,transparent calc(100% - 13px),#a28d6f0d);box-shadow:none}body:not([data-section="safety"]) .tabs{background-color:#f2ebdcfa;background-image:var(--paper-grain)}}
 @media print{body:not([data-section="safety"]),body:not([data-section="safety"])>.wrap{background:#fff;box-shadow:none}}
 
+
+.photo-viewport{width:100%;max-height:520px;overflow:auto;overscroll-behavior:contain;border:1px solid var(--line);background:#e6e0d2;-webkit-overflow-scrolling:touch}
+.photo-stage{position:relative;width:100%;line-height:0;isolation:isolate}
+.photo-preview .photo-stage img{width:100%;height:auto;max-height:none;display:block;object-fit:fill;border:0}
+.photo-overlay{position:absolute;inset:0;pointer-events:none}
+.photo-pocket .photo-map-box{position:absolute;pointer-events:auto;min-height:0;min-width:0;padding:0;border:1px dashed #a64827b3;border-radius:0;background:#f6efdd26;color:#923c27;font:10px/1.15 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;overflow:hidden;overflow-wrap:anywhere;white-space:normal;text-align:left;cursor:pointer}
+.photo-pocket .photo-map-box.translated{background:#fffdf4;border:1px solid #a9997266;color:#202a24;padding:0 1px;text-align:center;box-shadow:0 0 1px #fff}
+.photo-pocket .photo-map-box.selected{outline:2px solid var(--accent);outline-offset:1px;z-index:1}
+.photo-map-tools{border-top:1px solid var(--line);padding:11px 0 6px}.photo-map-actions{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}
+.photo-map-actions button{flex:1;min-width:100px}.photo-map-actions #photo-map-all{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.photo-pocket .photo-zoom-label{display:flex;align-items:center;gap:9px;font-size:12px;margin:9px 0}.photo-zoom-label select{font-family:inherit;font-size:16px;min-height:44px;padding:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);flex:1}
+.language-pocket .photo-map-help,.language-pocket .photo-fulltext-note{font-size:11px;line-height:1.75;margin:6px 0 10px}
+.language-pocket #photo-map-status{font-size:12px;color:var(--accent);line-height:1.75;margin:8px 0;overflow-wrap:anywhere}.language-pocket #photo-map-status:empty{display:none}
+.photo-map-detail{border:1px solid var(--line);border-left:3px solid var(--accent);padding:12px;background:#f6f0e2;margin:10px 0}
+.photo-map-detail-head{display:flex;align-items:center;justify-content:space-between;gap:6px}.photo-map-detail-head b{font-size:12px;font-weight:500}.photo-map-detail-head button{font-size:11px;background:transparent;padding:5px 8px}
+.language-pocket #photo-map-source{min-height:65px;resize:vertical}.language-pocket .photo-map-translation{font-size:17px;line-height:1.7;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere;padding:8px 0}
+.language-pocket #photo-map-confidence{font-size:11px;color:var(--accent);margin:7px 0}
+@media(max-width:650px){.photo-viewport{max-height:440px}}
+
 </style></head><body><div class="wrap"><header><div class="topbar"><div class="brand">俄罗斯 · 十一日札记</div><span>2026.09.26 — 10.06</span></div><div class="hero editorial-hero"><div class="hero-copy"><div class="eyebrow" lang="ru">ДНЕВНИК ПУТЕШЕСТВИЯ · 2026</div><h1>九月末，<br>去俄罗斯。</h1><p class="intro">莫斯科的长街，彼得堡的秋水。<br>天一点点暗下来，街灯替秋天续上一行。</p><div class="stats"><span><b>11</b>天</span><span><b>2</b>座城</span><span><b>50</b>处餐桌与补给</span></div></div><div class="cover-art" id="cover-art"></div><div class="hero-colophon"><span>26 СЕНТЯБРЯ — 6 ОКТЯБРЯ</span><span>秋日旅行札记 · 2026</span></div></div></header><section class="shared-banner" aria-label="本机保存状态"><div><b>本机保存</b><span>无需登录 · 随手选择</span></div><p id="sync-status" role="status">选择会保存在当前浏览器</p></section><div class="trip-route" aria-label="全程城市路线"><span><b>莫斯科</b><small>9.26 — 9.30</small></span><i aria-hidden="true">→</i><span><b>圣彼得堡</b><small>10.01 — 10.04</small></span><i aria-hidden="true">→</i><span><b>莫斯科</b><small>10.04 — 10.06</small></span></div><nav class="tabs" role="tablist" aria-label="指南栏目"><button role="tab" id="tab-day" aria-controls="view-day" aria-selected="true" data-view="day">行程三餐</button><button role="tab" id="tab-food" aria-controls="view-food" aria-selected="false" data-view="food">想吃清单</button><button role="tab" id="tab-rest" aria-controls="view-rest" aria-selected="false" data-view="rest">餐厅收藏</button><button role="tab" id="tab-transit" aria-controls="view-transit" aria-selected="false" data-view="transit">入境交通</button><button role="tab" id="tab-safety" aria-controls="view-safety" aria-selected="false" data-view="safety">安全求助</button></nav><details class="xhs-help"><summary>小红书打不开时，怎样找到原帖？</summary><p>手机装有小红书时，可点“App 直达”尝试直接进入这篇笔记；上方标题仍打开原始网页链接。如果微信等内置浏览器拦截，可先用手机系统浏览器打开本指南。直达按钮按<a href="https://pages.xiaohongshu.com/activity/deeplink" target="_blank" rel="noopener noreferrer">小红书官方说明</a>提供，当前手机版本的兼容性尚未实测；若仍失败，可复制标题到小红书搜索。</p></details><details class="language-pocket" id="language-pocket"><summary>中俄互译 · 临时问一句</summary><details class="photo-pocket" id="photo-pocket">
   <summary>拍照翻译 · 菜单与路牌</summary>
   <div class="photo-picker-row">
@@ -134,9 +153,22 @@ body:not([data-section="safety"]) .date-nav{background-color:#f2ebdcf7;backgroun
   </div>
   <input type="file" id="photo-camera-input" accept="image/*" capture="environment" hidden>
   <input type="file" id="photo-album-input" accept="image/*" hidden>
-  <p class="photo-tip">拍近一点，文字摆正。长菜单可点选一行。</p>
+  <p class="photo-tip">拍近一点，文字摆正。识别后可把译文贴回照片，也可点框校对。</p>
   <div id="photo-preview" class="photo-preview" hidden>
-    <img id="photo-image" alt="选中的待翻译照片">
+    <div id="photo-map-tools" class="photo-map-tools" hidden>
+      <p id="photo-map-caption"></p>
+      <div class="photo-map-actions"><button type="button" id="photo-map-all">翻译图中文字</button><button type="button" id="photo-map-cancel" hidden>停止翻译</button><button type="button" id="photo-map-toggle" aria-pressed="true">查看原图</button></div>
+      <label class="photo-zoom-label" for="photo-map-zoom">照片大小 <select id="photo-map-zoom"><option value="1">适应宽度</option><option value="1.5">放大 150%</option><option value="2">放大 200%</option><option value="3">放大 300%</option></select></label>
+      <p class="photo-map-help">点译文对照原文；放大后可以左右拖动查看。每次最多翻译40处，可接着补全。仅向翻译服务发送文字。</p>
+    </div>
+    <div class="photo-viewport" tabindex="0" aria-label="照片与对应译文，可放大后滚动查看"><div id="photo-stage" class="photo-stage"><img id="photo-image" alt="选中的待翻译照片"><div id="photo-overlay" class="photo-overlay" aria-label="照片上的文字位置"></div></div></div>
+    <p id="photo-map-status" role="status" aria-live="polite"></p>
+    <section id="photo-map-detail" class="photo-map-detail" hidden aria-labelledby="photo-map-detail-title">
+      <div class="photo-map-detail-head"><b id="photo-map-detail-title">原文与译文</b><button type="button" id="photo-map-close">收起对照</button></div>
+      <label for="photo-map-source">这一处的原文 · 可校正</label><textarea id="photo-map-source" rows="2" spellcheck="false"></textarea><p id="photo-map-confidence"></p>
+      <label>对应译文</label><p id="photo-map-translation" class="photo-map-translation"></p>
+      <div class="photo-map-actions"><button type="button" id="photo-map-one">翻译这一处</button><button type="button" id="photo-map-read" disabled>带到下方朗读／复制</button></div>
+    </section>
     <div class="photo-image-actions">
       <button type="button" id="photo-rotate">旋转 90°</button>
       <button type="button" id="photo-recognize">重新识别</button>
@@ -149,13 +181,14 @@ body:not([data-section="safety"]) .date-nav{background-color:#f2ebdcf7;backgroun
   </div>
   <progress id="photo-progress" max="1" value="0" aria-label="照片识别进度" hidden></progress>
   <section id="photo-result-panel" class="photo-result-panel" aria-labelledby="photo-result-title" hidden>
-    <label for="photo-text" id="photo-result-title">识别到的文字 · 可以直接修改</label>
+    <label for="photo-text" id="photo-result-title">识别全文 · 可单独修改、翻译</label>
+    <p class="photo-fulltext-note">这里修改全文不会移动图中文字框；图上的错字请点对应框校正。</p>
     <textarea id="photo-text" rows="4" spellcheck="false" aria-describedby="photo-review-note"></textarea>
     <div class="photo-result-actions"><button type="button" id="photo-use-all">带入下方翻译</button></div>
     <p id="photo-review-note"></p>
     <div id="photo-line-list" class="photo-line-list" aria-label="点选一行文字"></div>
   </section>
-  <p class="photo-privacy">照片在本机识别，不上传；翻译时仅发送你选用的文字。首次识别需联网下载识字资料，可能稍等片刻。</p>
+  <p class="photo-privacy">照片在本机识别，不上传；翻译时仅发送你选用的文字。“翻译图中文字”会依次发送图中识别到的文字，使用下方所述的 MyMemory 服务。首次识别需联网下载识字资料，可能稍等片刻。</p>
 </details>
 
 <section id="voice-input" class="voice-input" aria-label="语音输入" data-state="idle">
@@ -699,13 +732,6 @@ document.body.dataset.section=view;
 if(['day','food','rest','transit','safety'].includes(location.hash.slice(1)))changeView(location.hash.slice(1));
 
 
-(function initInlineTranslation(){
- const input=$('#translation-text'),result=$('#translation-result'),output=$('#translation-output'),status=$('#translation-status'),copy=$('#translation-copy');
- const actions=[$('#translate-zh-ru'),$('#translate-ru-zh')];
- let sequence=0,controller=null,busy=false;
- function setBusy(value){busy=value;actions.forEach(b=>b.disabled=value);input.setAttribute('aria-busy',String(value));}
- function clearResult(){clearTimeout(copy.copyTimer);copy.classList.remove('copied');copy.textContent='复制译文';delete copy.dataset.copyLabel;result.value='';output.hidden=true;copy.disabled=true;delete copy.dataset.copyText;delete copy.dataset.copyKind;document.dispatchEvent(new Event('pocket-translation-clear'));}
- function cancel(){sequence++;controller?.abort();controller=null;setBusy(false);clearResult();status.textContent='';}
  function decodeText(text){const named={amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:' '};return text.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi,(all,key)=>{if(key[0]!=='#')return named[key.toLowerCase()]??all;const n=key[1].toLowerCase()==='x'?parseInt(key.slice(2),16):parseInt(key.slice(1),10);return n>0&&n<=0x10ffff&&!(n>=0xd800&&n<=0xdfff)?String.fromCodePoint(n):all;});}
  /* TRANSLATION_NETWORK_START */
  async function requestTranslation(text,from,to,signal){
@@ -721,6 +747,14 @@ if(['day','food','rest','transit','safety'].includes(location.hash.slice(1)))cha
   return decodeText(textResult).trim();
  }
  /* TRANSLATION_NETWORK_END */
+(function initInlineTranslation(){
+ const input=$('#translation-text'),result=$('#translation-result'),output=$('#translation-output'),status=$('#translation-status'),copy=$('#translation-copy');
+ const actions=[$('#translate-zh-ru'),$('#translate-ru-zh')];
+ let sequence=0,controller=null,busy=false;
+ function setBusy(value){busy=value;actions.forEach(b=>b.disabled=value);input.setAttribute('aria-busy',String(value));}
+ function clearResult(){clearTimeout(copy.copyTimer);copy.classList.remove('copied');copy.textContent='复制译文';delete copy.dataset.copyLabel;result.value='';output.hidden=true;copy.disabled=true;delete copy.dataset.copyText;delete copy.dataset.copyKind;document.dispatchEvent(new Event('pocket-translation-clear'));}
+ function cancel(){sequence++;controller?.abort();controller=null;setBusy(false);clearResult();status.textContent='';}
+
  async function translate(from,to){
   if(busy)return;cancel();const text=input.value.trim();
   if(!text){status.textContent='先输入或粘贴一句话。';input.focus();return;}
@@ -739,21 +773,154 @@ if(['day','food','rest','transit','safety'].includes(location.hash.slice(1)))cha
  }
  input.addEventListener('input',cancel);
  document.addEventListener('pocket-voice-start',cancel);
+ document.addEventListener('pocket-photo-translate',cancel);
+ document.addEventListener('pocket-photo-result',event=>{
+  const value=event.detail;if(!value||!['zh-CN','ru-RU'].includes(value.lang)||typeof value.translation!=='string')return;
+  cancel();input.value=value.source;input.dispatchEvent(new Event('input',{bubbles:true}));
+  result.value=value.translation;result.lang=value.lang;output.hidden=false;copy.disabled=false;copy.dataset.copyText=value.translation;copy.dataset.copyKind='译文';
+  $('#translation-result-label').textContent=value.lang==='ru-RU'?'俄语译文':'中文译文';status.textContent='已带入图中这一处的译文。';document.dispatchEvent(new Event('pocket-translation-ready'));
+ });
  $('#translation-clear').addEventListener('click',()=>{input.value='';cancel();input.focus();});
  actions[0].addEventListener('click',()=>translate('zh-CN','ru'));actions[1].addEventListener('click',()=>translate('ru','zh-CN'));
  window.addEventListener('pagehide',cancel);
 })();
 
+// Retain OCR geometry so each translation stays attached to its original line.
+function photoRegions(data,width,height){
+ const out=[];
+ function add(text,box,confidence){
+  text=String(text||'').replace(/\s+/g,' ').trim();
+  if(!text||!box||!['x0','y0','x1','y1'].every(k=>Number.isFinite(box[k])))return;
+  const bbox={x0:Math.max(0,box.x0),y0:Math.max(0,box.y0),x1:Math.min(width,box.x1),y1:Math.min(height,box.y1)};
+  if(bbox.x1<=bbox.x0||bbox.y1<=bbox.y0)return;
+  out.push({text,bbox,confidence:Number(confidence),translation:'',literal:!/[\p{L}]/u.test(text)});
+ }
+ for(const block of data.blocks||[]){
+  for(const paragraph of block.paragraphs||[]){
+   for(const line of paragraph.lines||[]){
+    const words=(line.words||[]).filter(w=>w.text?.trim()&&w.bbox&&['x0','y0','x1','y1'].every(k=>Number.isFinite(w.bbox[k])));
+    if(words.length<2){add(line.text,line.bbox,line.confidence);continue;}
+    let group=[];
+    const flush=()=>{if(!group.length)return;add(group.map(w=>w.text).join(' '),{x0:Math.min(...group.map(w=>w.bbox.x0)),y0:Math.min(...group.map(w=>w.bbox.y0)),x1:Math.max(...group.map(w=>w.bbox.x1)),y1:Math.max(...group.map(w=>w.bbox.y1))},line.confidence);group=[];};
+    // Large gaps often separate menu columns or a dish from its price.
+    const gap=Math.max((line.bbox?.y1-line.bbox?.y0||20)*2.4,width*.045);
+    for(const word of words){if(group.length&&word.bbox.x0-group[group.length-1].bbox.x1>gap)flush();group.push(word);}flush();
+   }
+  }
+ }
+ return out.sort((a,b)=>a.bbox.y0-b.bbox.y0||a.bbox.x0-b.bbox.x0);
+}
+function createPhotoMap(){
+ const get=id=>document.getElementById(id),stage=get('photo-stage'),layer=get('photo-overlay'),tools=get('photo-map-tools'),detail=get('photo-map-detail');
+ const status=get('photo-map-status'),source=get('photo-map-source'),translated=get('photo-map-translation'),all=get('photo-map-all'),cancel=get('photo-map-cancel'),toggle=get('photo-map-toggle'),zoom=get('photo-map-zoom');
+ let regions=[],width=1,height=1,lang='rus',active=null,selected=-1,show=true,cache=new Map(),total=0;
+ const fits=text=>!!text.trim()&&Array.from(text.trim()).length<=160&&new TextEncoder().encode(text.trim()).length<=500;
+ function say(value){status.textContent=value;}
+ function controls(){
+  const ready=regions.some(r=>!r.literal&&fits(r.text)&&!r.translation);
+  all.disabled=!!active||!ready;cancel.hidden=!active;get('photo-map-one').disabled=!!active||selected<0||!fits(source.value);
+  source.disabled=!!active;get('photo-map-read').disabled=selected<0||!regions[selected]?.translation;
+  all.textContent=regions.some(r=>r.translation)?'补全图上译文':'翻译图中文字';
+  toggle.setAttribute('aria-pressed',String(show));toggle.textContent=show?'查看原图':'查看图上译文';layer.hidden=!show;
+ }
+ function stop(message){if(active){const old=active;active=null;old.controller.abort();clearTimeout(old.timer);controls();if(message)say(message);}}
+ function clear(){
+  stop();regions=[];cache.clear();selected=-1;total=0;show=true;layer.replaceChildren();tools.hidden=true;detail.hidden=true;source.value='';translated.textContent='';say('');zoom.value='1';stage.style.width='100%';controls();
+ }
+ function fitLabels(){
+  for(const node of layer.children){
+   const r=regions[Number(node.dataset.region)];if(!r?.translation)continue;
+   const rect=node.getBoundingClientRect(),w=Math.max(1,rect.width-4),h=Math.max(1,rect.height-2);
+   const units=Array.from(r.translation).reduce((n,c)=>n+(/[\u3400-\u9fff]/.test(c)?1:.57),0);
+   let size=Math.min(24,h*.86);
+   while(size>7&&Math.ceil(units*size/w)*size*1.15>h)size-=.5;
+   node.style.fontSize=Math.max(7,size)+'px';
+  }
+ }
+ function paint(){
+  layer.replaceChildren();
+  regions.forEach((r,i)=>{
+   if(r.literal)return;const b=r.bbox,button=document.createElement('button');button.type='button';button.className='photo-map-box'+(r.translation?' translated':'')+(selected===i?' selected':'');button.dataset.region=String(i);
+   button.style.left=(100*b.x0/width)+'%';button.style.top=(100*b.y0/height)+'%';button.style.width=(100*(b.x1-b.x0)/width)+'%';button.style.height=(100*(b.y1-b.y0)/height)+'%';
+   button.textContent=r.translation||String(i+1);button.lang=r.translation?(lang==='rus'?'zh-CN':'ru-RU'):'';
+   button.setAttribute('aria-label','第'+(i+1)+'处，'+r.text+(r.translation?'；译文：'+r.translation:'；点此校对并翻译'));
+   button.setAttribute('aria-pressed',String(selected===i));button.addEventListener('click',()=>select(i));layer.appendChild(button);
+  });
+  controls();fitLabels();
+ }
+ function select(i){
+  if(!regions[i])return;selected=i;const r=regions[i];detail.hidden=false;get('photo-map-detail-title').textContent='第 '+(i+1)+' 处 · 原文与译文';source.value=r.text;source.lang=lang==='rus'?'ru-RU':'zh-CN';
+  translated.textContent=r.translation||'还未翻译；可以先改正识别文字。';translated.lang=lang==='rus'?'zh-CN':'ru-RU';
+  get('photo-map-confidence').textContent=Number.isFinite(r.confidence)&&r.confidence<60?'这一处识别把握较低，请对照照片检查。':'';paint();
+ }
+ function load(data,w,h,language){
+  clear();width=w;height=h;lang=language;
+  const found=photoRegions(data,w,h);total=found.length;regions=found.slice(0,200);
+  tools.hidden=!regions.some(r=>!r.literal);
+  if(tools.hidden){say('未取得文字位置，仍可使用下方的文字翻译。');return;}
+  const n=regions.filter(r=>!r.literal).length;
+  get('photo-map-caption').textContent='识别到 '+n+' 处文字。点图中框可校对；翻译后点译文看原文。'+(total>200?'本图只标注前200处，建议分区拍摄。':'');
+  say('文字框已定位，点“翻译图中文字”后会把译文贴回对应位置。');paint();
+ }
+ async function translate(indices){
+  if(active||!indices.length)return;
+  if(navigator.onLine===false){say('图上翻译需要联网；原图和已完成的译文仍可对照。');return;}
+  const queue=indices.filter(i=>regions[i]&&!regions[i].literal&&fits(regions[i].text));
+  if(!queue.length){say('请把这一处改为较短的文字再翻译。');return;}
+  document.dispatchEvent(new Event('pocket-photo-translate'));
+  const session={controller:new AbortController(),timer:null};active=session;controls();show=true;controls();let done=0;
+  try{
+   for(const i of queue){
+    if(active!==session)return;const r=regions[i],original=r.text,key=lang+'|'+original;let value=cache.get(key);
+    say('正在翻译 '+(done+1)+' / '+queue.length+' 处…');
+    if(!value){
+     session.timer=setTimeout(()=>session.controller.abort(),15000);
+     try{value=await requestTranslation(original,lang==='rus'?'ru':'zh-CN',lang==='rus'?'zh-CN':'ru',session.controller.signal);}finally{clearTimeout(session.timer);}
+    }
+    if(active!==session)return;cache.set(key,value);r.translation=value;done++;paint();if(selected===i)translated.textContent=value;
+   }
+   const left=regions.filter(r=>!r.literal&&!r.translation).length;
+   say(left?'已翻译 '+done+' 处，还有 '+left+' 处未翻译；可补全，或点框校对长句。':'图上译文已完成。点译文可对照原文，字小时可放大照片。');
+  }catch(error){
+   if(active!==session)return;
+   say(error.message==='quota'?'翻译服务额度暂时用完；已完成的译文会保留。':session.controller.signal.aborted?'翻译等待较久，已保留完成的部分。检查网络后可继续。':'暂时连接不到翻译服务，已保留完成的部分，可稍后补全。');
+  }finally{if(active===session){active=null;clearTimeout(session.timer);controls();}}
+ }
+ all.addEventListener('click',()=>{
+  const pending=regions.map((r,i)=>!r.translation&&!r.literal&&fits(r.text)?i:-1).filter(i=>i>=0);
+  translate(pending.slice(0,40));
+ });
+ cancel.addEventListener('click',()=>stop('已停止翻译，完成的译文仍留在图上。'));
+ toggle.addEventListener('click',()=>{show=!show;controls();if(show)fitLabels();});
+ zoom.addEventListener('change',()=>{stage.style.width=(Number(zoom.value)*100)+'%';fitLabels();});
+ source.addEventListener('input',()=>{if(selected<0)return;const r=regions[selected];r.text=source.value.trim();r.translation='';translated.textContent='已修改原文，点“翻译这一处”更新。';paint();});
+ get('photo-map-one').addEventListener('click',()=>{if(selected>=0)translate([selected]);});
+ get('photo-map-close').addEventListener('click',()=>{detail.hidden=true;selected=-1;paint();});
+ get('photo-map-read').addEventListener('click',()=>{
+  const r=regions[selected];if(!r?.translation)return;stop('已保留图上译文。');
+  document.dispatchEvent(new CustomEvent('pocket-photo-result',{detail:{source:r.text,translation:r.translation,lang:lang==='rus'?'zh-CN':'ru-RU'}}));
+  get('translation-output').scrollIntoView({block:'center',behavior:'smooth'});
+ });
+ for(const id of ['photo-pocket','language-pocket'])get(id).addEventListener('toggle',e=>{if(!e.currentTarget.open)stop('已停止翻译，完成的译文仍留在图上。');});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop('已停止翻译，回到页面后可继续。');});
+ document.addEventListener('pocket-voice-start',()=>stop('语音输入已打开，图上翻译已暂停。'));
+ for(const id of ['translate-zh-ru','translate-ru-zh'])get(id).addEventListener('click',()=>stop('已切换到文字翻译，图上译文保留。'),true);
+ if(typeof ResizeObserver==='function')new ResizeObserver(fitLabels).observe(stage);else window.addEventListener('resize',fitLabels);
+ get('photo-image').addEventListener('load',fitLabels);
+ return {clear,load,stop};
+}
+
 const PHOTO_ASSET_BASE=new URL('ocr/',location.href).href;
 (function initPhotoTranslation(){
  const $p=id=>document.getElementById(id),camera=$p('photo-camera-input'),album=$p('photo-album-input'),preview=$p('photo-preview'),image=$p('photo-image'),status=$p('photo-status'),progress=$p('photo-progress'),panel=$p('photo-result-panel'),text=$p('photo-text'),language=$p('photo-language'),cancelButton=$p('photo-cancel');
  if(!camera||!album)return;
+ const photoMap=createPhotoMap();
  let bitmap=null,imageURL=null,libraryPromise=null,worker=null,creation=null,generation=0,busy=false,lastImported='',watchdog=null,initializationBlocked=false;
  function message(value){status.textContent=value;}
  function setBusy(value){busy=value;cancelButton.hidden=!value;progress.hidden=!value;for(const id of ['photo-rotate','photo-recognize'])$p(id).disabled=value||!bitmap||(id==='photo-recognize'&&initializationBlocked);language.disabled=value;$p('photo-reload').hidden=!initializationBlocked;}
  function canTranslate(value){return Array.from(value.trim()).length<=160&&new TextEncoder().encode(value.trim()).length<=500;}
- function resetResult(){text.value='';panel.hidden=true;$p('photo-line-list').replaceChildren();$p('photo-review-note').textContent='';}
- function stop(messageText=''){if(creation)initializationBlocked=true;generation++;clearTimeout(watchdog);watchdog=null;const old=worker;worker=null;if(old)Promise.resolve(old.terminate()).catch(()=>{});setBusy(false);if(initializationBlocked)message('识字资料的准备已中断，请刷新当前页后重新选图。');else if(messageText)message(messageText);}
+ function resetResult(){photoMap.clear();text.value='';panel.hidden=true;$p('photo-line-list').replaceChildren();$p('photo-review-note').textContent='';}
+ function stop(messageText=''){photoMap.stop();if(creation)initializationBlocked=true;generation++;clearTimeout(watchdog);watchdog=null;const old=worker;worker=null;if(old)Promise.resolve(old.terminate()).catch(()=>{});setBusy(false);if(initializationBlocked)message('识字资料的准备已中断，请刷新当前页后重新选图。');else if(messageText)message(messageText);}
  function revokeImage(){if(imageURL)URL.revokeObjectURL(imageURL);imageURL=null;image.removeAttribute('src');}
  function clearPhoto(){stop();bitmap=null;revokeImage();camera.value='';album.value='';preview.hidden=true;resetResult();if(lastImported&&$p('translation-text').value===lastImported){$p('translation-text').value='';$p('translation-text').dispatchEvent(new Event('input',{bubbles:true}));}lastImported='';message('');}
  function asset(path){return new URL(path,PHOTO_ASSET_BASE).href;}
@@ -784,11 +951,11 @@ const PHOTO_ASSET_BASE=new URL('ocr/',location.href).href;
    },errorHandler:()=>{if(token===generation)stop('识字工具暂未准备好，请联网后重试。');}});
    creation=pending;try{ownedWorker=await pending;}finally{if(creation===pending)creation=null;}
    if(token!==generation){await ownedWorker.terminate();return;}worker=ownedWorker;
-   message('正在识别文字…');const response=await ownedWorker.recognize(canvas);if(token!==generation)return;
+   message('正在识别文字…');const response=await ownedWorker.recognize(canvas,{}, {text:true,blocks:true});if(token!==generation)return;
    const recognized=String(response.data?.text||'').trim();
    if(!recognized){message('没有识别到清晰文字。把镜头靠近一点、避开反光，再试一次。');return;}
-   text.value=recognized;panel.hidden=false;renderLines();
-   const confidence=Number(response.data?.confidence);message(Number.isFinite(confidence)&&confidence<45?'识别完成，部分字可能不准确，请先看一眼再翻译。':'识别完成。看一眼文字，就可以在下面翻译。');
+   text.value=recognized;panel.hidden=false;renderLines();photoMap.load(response.data,canvas.width,canvas.height,selectedLanguage);
+   const confidence=Number(response.data?.confidence);message(Number.isFinite(confidence)&&confidence<45?'识别完成，部分字可能不准确，请先看一眼再翻译。':'识别完成。可把译文显示在图上，也可在下方逐行翻译。');
   }catch(error){if(token!==generation)return;message('暂时没有识别成功。请检查网络，或拍近一点再试；照片不会上传。');}
   finally{if(ownedWorker){if(worker===ownedWorker)worker=null;try{await ownedWorker.terminate();}catch{}}
    if(token===generation){clearTimeout(watchdog);watchdog=null;setBusy(false);}
@@ -927,6 +1094,7 @@ const PHOTO_ASSET_BASE=new URL('ocr/',location.href).href;
  }
  document.getElementById('language-pocket')?.addEventListener('toggle',event=>{if(!event.currentTarget.open)interrupt();});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt('语音输入已停止。');});
+ document.addEventListener('pocket-photo-translate',()=>interrupt('语音输入已停止。'));
  window.addEventListener('pagehide',()=>interrupt(''));
  if(!supported)message(window.isSecureContext===false?'请在网站的 HTTPS 页面使用语音输入，或用手机键盘上的麦克风。':'此浏览器暂不支持网页语音输入。点下方文字框，再用手机键盘上的麦克风即可。');
  sync();
