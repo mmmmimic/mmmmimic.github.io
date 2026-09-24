@@ -334,7 +334,7 @@ const D={"meals":[["2026-09-26","早餐","杭州出发日；14:25航班","在家
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)], esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dates=[...new Set(D.meals.map(m=>m[0]))], weekdays=['周六','周日','周一','周二','周三','周四','周五','周六','周日','周一','周二'];
 const cities=['杭州 → 莫斯科','莫斯科','莫斯科','莫斯科','莫斯科','莫斯科 → 圣彼得堡','圣彼得堡','圣彼得堡','圣彼得堡 → 莫斯科','莫斯科','莫斯科 → 杭州'];
-const titles=["异乡的第一夜", "旧物与太空梦", "巨人长眠之后", "画里的人，窗外的黄昏", "钟声越过红墙", "雪国列车", "冬宫深处", "芬兰湾的风", "运河未尽", "We'll always have Moscow", "夜航向东"];
+const titles=["异乡的第一夜", "旧物与太空梦", "巨人长眠之后", "画外的黄昏", "钟声越过红墙", "雪国列车", "冬宫深处", "芬兰湾的风", "运河未尽", "We'll always have Moscow", "夜航向东"];
 let state={chosen:{},favs:[],tried:[],visited:[]};const openMeals=new Set();
 let selected=dates[0],pace='all',view='day',favfilter='all',currentRest=null,toastTimer;
 const ids=text=>[...new Set([...text.matchAll(/\b[MST]\d{2}\b/g)].map(m=>m[0]))].filter(id=>D.restaurants[id]);
