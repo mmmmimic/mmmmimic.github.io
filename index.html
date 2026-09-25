@@ -646,6 +646,33 @@
             object-position: center;
         }
 
+        .paper-teaser-placeholder {
+            align-content: end;
+            justify-items: start;
+            padding: 17px;
+            color: #eef8ff;
+            background:
+                radial-gradient(circle at 84% 18%, rgba(99, 230, 212, 0.42), transparent 32%),
+                linear-gradient(145deg, #111a35, #2e3974);
+        }
+
+        .paper-teaser-placeholder strong {
+            font-family: "Manrope", sans-serif;
+            font-size: 1.55rem;
+            letter-spacing: -0.05em;
+            line-height: 1;
+        }
+
+        .paper-teaser-placeholder span {
+            margin-top: 7px;
+            color: rgba(238, 248, 255, 0.72);
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1.35;
+            text-transform: uppercase;
+        }
+
         .paper:hover .paper-teaser img { transform: scale(1.025); }
 
         .paper-meta {
@@ -1165,6 +1192,19 @@
                     </article>
 
                     <article class="paper">
+                        <figure class="paper-teaser paper-teaser-placeholder" aria-label="AdaM-Rec title card">
+                            <strong>AdaM-Rec</strong>
+                            <span>Adaptive modality routing</span>
+                        </figure>
+                        <div>
+                            <div class="paper-meta"><span class="venue-badge">NeurIPS 2026</span><span class="paper-topic">Multimodal recommendation</span></div>
+                            <div class="paper-title">AdaM-Rec: Adaptive Modality Routing for Multimodal Recommendation</div>
+                            <p class="paper-summary">Introduces adaptive modality routing to dynamically select and combine heterogeneous signals for multimodal recommendation. Rather than applying a fixed fusion strategy, AdaM-Rec tailors modality use to each recommendation context.</p>
+                            <div class="paper-authors">Honghao Fu, Jiacheng Chen, <strong>Manxi Lin</strong>, Junjun Zheng, Xiangheng Kong, Yiwei Wang, Xin Yu, Miao Xu, Yuning Jiang, Yijun Cai</div>
+                        </div>
+                    </article>
+
+                    <article class="paper">
                         <figure class="paper-teaser"><img src="assets/papers/tita.png" alt="Comparison of training-time, sequence-level, and token-level vision-language alignment"></figure>
                         <div>
                             <div class="paper-meta"><span class="venue-badge">Findings of ACL 2026</span><span class="paper-topic">Inference-time alignment</span></div>
@@ -1233,7 +1273,7 @@
                     <article class="paper">
                         <figure class="paper-teaser"><img src="assets/papers/on-manifold-shapley.png" alt="Comparison of attribution maps from generative-flow and baseline methods"></figure>
                         <div>
-                            <div class="paper-meta"><span class="venue-badge">arXiv 2026</span><span class="paper-topic">Feature attribution</span></div>
+                            <div class="paper-meta"><span class="venue-badge">NeurIPS 2026</span><span class="paper-topic">Feature attribution</span></div>
                             <div class="paper-title">From Baselines to Transport Geodesics: Axiomatic Attribution via Optimal Generative Flows</div>
                             <p class="paper-summary">Reframes feature attribution as both credit allocation along a path and principled path selection. Optimal generative transport produces more stable, structured explanations while preserving competitive faithfulness.</p>
                             <div class="paper-authors">Cenwei Zhang, Lin Zhu, <strong>Manxi Lin</strong>, Lei You</div>
